@@ -22,6 +22,7 @@ export default function Listepkd (props){
               return <div key={key} className="bloc-pokemon">
                 <img  alt={pokemon.name} src={pokemon.img}/>
                 <h2>{pokemon.name}</h2>
+                <h2>{pokemon.type1},{pokemon.type2}</h2>
                 <button onClick={()=>DeletePokedex(pokemon)}>Supprimer</button>
               </div>
             })

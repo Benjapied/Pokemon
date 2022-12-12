@@ -23,6 +23,7 @@ export default function Liste (props){
                 <img  alt={pokemon.name} src={pokemon.img}/>
                 <p>#{pokemon.numero}</p>
                 <h2>{pokemon.name}</h2>
+                <h2>{pokemon.type1},{pokemon.type2}</h2>
                 <button onClick={()=>addToPokedex(pokemon)}>Capturer !</button>
               </div>
             })

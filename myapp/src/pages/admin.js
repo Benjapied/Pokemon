@@ -13,6 +13,7 @@ export default function PageAdmin(props) {
       <Menu />
       <Page3para />
       <App />
+      <p>Quel pokemon voulez-vous modifier ?</p>
       <FormChoose />
       <ListeAdmin />
     </body>
