@@ -9,3 +9,4 @@ export const Page2para = (props) => {
 export const Page3para = (props) => {
     return <p>Ajouter un pokemon</p>;
 }
+
