@@ -23,7 +23,7 @@ export const FormChoose = () => {
   const { register, handleSubmit} = useForm();
   const onSubmit = (data) => {
     console.log(JSON.stringify(data));
-    
+    window.location.href = window.location.href + "?numero=" + data.numero ;
   }
 
   return (
