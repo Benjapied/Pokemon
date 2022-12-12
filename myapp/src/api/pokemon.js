@@ -75,3 +75,18 @@ export const addToPokemon = async (pokemon) => {
     .then(response => console.log(JSON.stringify(response)))
 }
 
+export const UpdatePokemon = async (pokemon) => {
+    console.log(pokemon)
+    await fetch(
+        'http://localhost:4444/pokemon/replace', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json', 
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(pokemon)
+        }
+    )
+    .then(response => response.json())
+    .then(response => console.log(JSON.stringify(response)))
+}

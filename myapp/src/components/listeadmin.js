@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { addToPokedex, getAll } from '../api/pokemon.js';
+import {  getAll } from '../api/pokemon.js';
+import { UpdateForm } from './formulaire.js';
 
 
 export default function ListeAdmin (props){
@@ -30,7 +31,7 @@ export default function ListeAdmin (props){
                         <img  alt={pokemon.name} src={pokemon.img}/>
                         <p>#{pokemon.numero}</p>
                         <h2>{pokemon.name}</h2>
-                        <button onClick={()=>addToPokedex(pokemon)}>Capturer !</button>
+                        <div><UpdateForm /></div>
                         </div>
                     } else {
                         return console.log("error")
