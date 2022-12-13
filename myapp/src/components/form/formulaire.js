@@ -16,7 +16,7 @@ export const App = () => {
       <input {...register("name")} placeholder="Name" />
       <input {...register("img")} placeholder="Image" />
       <select {...register("type1", { required: true })}>
-        <option value="None">Select...</option>
+        <option value="None">None</option>
         <option value="feu">Feu</option>
         <option value="eau">Eau</option>
         <option value="plante">Plante</option>
@@ -37,7 +37,7 @@ export const App = () => {
         <option value="vol">Vol</option>
       </select>
       <select {...register("type2", { required: true })}>
-        <option value="None">Select...</option>
+        <option value="None">None</option>
         <option value="feu">Feu</option>
         <option value="eau">Eau</option>
         <option value="plante">Plante</option>
