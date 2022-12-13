@@ -1,7 +1,8 @@
 
-import { App, FormChoose } from "../components/formulaire.js";
+import { App } from "../components/form/formulaire.js";
+import { FormChoose } from "../components/form/formChoose";
 import { TitleAdmin } from "../components/home.js";
-import ListeAdmin from "../components/listeadmin.js";
+import ListeAdmin from "../components/liste/listeadmin.js";
 import Menu from "../components/menu.js";
 import { Page3para } from "../components/para.js";
 
