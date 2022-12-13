@@ -29,22 +29,22 @@ export default function ListeAdmin(props) {
                         if (pokemon.numero === num) {
                             if (pokemon.type2 === "None") {
                                 return <div key={key} className="bloc-pokemon">
-                                <img alt={pokemon.name} src={pokemon.img} />
-                                <p>#{pokemon.numero}</p>
-                                <h2>{pokemon.name}</h2>
-                                <p>{pokemon.type1}</p>
-                                <button onClick={() => DeletePokemon(pokemon)}>Supprimer</button>
-                                <div><UpdateForm /></div>
-                            </div>
+                                    <img alt={pokemon.name} src={pokemon.img} />
+                                    <p>#{pokemon.numero}</p>
+                                    <h2>{pokemon.name}</h2>
+                                    <p>{pokemon.type1}</p>
+                                    <button onClick={() => DeletePokemon(pokemon)}>Supprimer</button>
+                                    <div><UpdateForm /></div>
+                                </div>
                             } else {
                                 return <div key={key} className="bloc-pokemon">
-                                <img alt={pokemon.name} src={pokemon.img} />
-                                <p>#{pokemon.numero}</p>
-                                <h2>{pokemon.name}</h2>
-                                <p>{pokemon.type1},{pokemon.type2}</p>
-                                <button onClick={() => DeletePokemon(pokemon)}>Supprimer</button>
-                                <div><UpdateForm /></div>
-                            </div>
+                                    <img alt={pokemon.name} src={pokemon.img} />
+                                    <p>#{pokemon.numero}</p>
+                                    <h2>{pokemon.name}</h2>
+                                    <p>{pokemon.type1},{pokemon.type2}</p>
+                                    <button onClick={() => DeletePokemon(pokemon)}>Supprimer</button>
+                                    <div><UpdateForm /></div>
+                                </div>
                             }
                         } else {
                             return console.log("error")

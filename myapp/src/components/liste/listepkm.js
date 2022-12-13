@@ -42,7 +42,7 @@ export default function Liste(props) {
                   <p>{pokemon.type1}, {pokemon.type2}</p>
                   <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
                 </div>
-              } 
+              }
             } else {
               if (pokemon.type1 === type || pokemon.type2 === type) {
                 if (pokemon.type2 === "None") {

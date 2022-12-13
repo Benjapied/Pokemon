@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Menu(){
+function Menu() {
     return <nav>
         <ul>
             <li><Link to="/">Pokemon</Link></li>

@@ -37,7 +37,7 @@ export const App = () => {
         <option value="vol">Vol</option>
       </select>
       <select {...register("type2", { required: true })}>
-      <option value="None">Select...</option>
+        <option value="None">Select...</option>
         <option value="feu">Feu</option>
         <option value="eau">Eau</option>
         <option value="plante">Plante</option>
