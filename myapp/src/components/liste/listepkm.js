@@ -22,10 +22,28 @@ export default function Liste(props) {
 
   return <>
     <div>
-      <div>
-        {
-          pokemons.map((pokemon, key) => {
-            if (window.location.href = "http://localhost:3000") {
+      {
+        pokemons.map((pokemon, key) => {
+          if (type == undefined) {
+            if (pokemon.type2 === "None") {
+              return <div key={key} className="bloc-pokemon">
+                <img alt={pokemon.name} src={pokemon.img} />
+                <p>#{pokemon.numero}</p>
+                <h2>{pokemon.name}</h2>
+                <p>{pokemon.type1}</p>
+                <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+              </div>
+            } else {
+              return <div key={key} className="bloc-pokemon">
+                <img alt={pokemon.name} src={pokemon.img} />
+                <p>#{pokemon.numero}</p>
+                <h2>{pokemon.name}</h2>
+                <p>{pokemon.type1}, {pokemon.type2}</p>
+                <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+              </div>
+            }
+          } else {
+            if (pokemon.type1 === type || pokemon.type2 === type) {
               if (pokemon.type2 === "None") {
                 return <div key={key} className="bloc-pokemon">
                   <img alt={pokemon.name} src={pokemon.img} />
@@ -44,31 +62,11 @@ export default function Liste(props) {
                 </div>
               }
             } else {
-              if (pokemon.type1 === type || pokemon.type2 === type) {
-                if (pokemon.type2 === "None") {
-                  return <div key={key} className="bloc-pokemon">
-                    <img alt={pokemon.name} src={pokemon.img} />
-                    <p>#{pokemon.numero}</p>
-                    <h2>{pokemon.name}</h2>
-                    <p>{pokemon.type1}</p>
-                    <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-                  </div>
-                } else {
-                  return <div key={key} className="bloc-pokemon">
-                    <img alt={pokemon.name} src={pokemon.img} />
-                    <p>#{pokemon.numero}</p>
-                    <h2>{pokemon.name}</h2>
-                    <p>{pokemon.type1}, {pokemon.type2}</p>
-                    <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-                  </div>
-                }
-              } else {
-                return
-              }
+              return null;
             }
-          })
-        }
-      </div>
+          }
+        })
+      }
     </div>
   </>
 }

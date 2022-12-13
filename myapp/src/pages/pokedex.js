@@ -5,10 +5,10 @@ import { Page2para } from "../components/para.js";
 
 
 export default function Page2(props) {
-    return <body>
-      <TitlePokedex /> 
-      <Menu />
-      <Page2para />
-      <Listepkd />
-    </body>
+  return <div>
+    <TitlePokedex />
+    <Menu />
+    <Page2para />
+    <Listepkd />
+  </div>
 }

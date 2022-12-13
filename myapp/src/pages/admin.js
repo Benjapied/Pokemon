@@ -9,13 +9,13 @@ import { Page3para } from "../components/para.js";
 
 
 export default function PageAdmin(props) {
-    return <body>
-      <TitleAdmin /> 
-      <Menu />
-      <Page3para />
-      <App />
-      <p>Quel pokemon voulez-vous modifier ?</p>
-      <FormChoose />
-      <ListeAdmin />
-    </body>
+  return <div>
+    <TitleAdmin />
+    <Menu />
+    <Page3para />
+    <App />
+    <p>Quel pokemon voulez-vous modifier ?</p>
+    <FormChoose />
+    <ListeAdmin />
+  </div>
 }

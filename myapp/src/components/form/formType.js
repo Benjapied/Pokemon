@@ -11,7 +11,7 @@ export const FormType = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <select {...register("type", { required: true })}>
-                <option value="None">Select...</option>
+                <option value="None">Un seul type</option>
                 <option value="feu">Feu</option>
                 <option value="eau">Eau</option>
                 <option value="plante">Plante</option>
