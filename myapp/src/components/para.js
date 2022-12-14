@@ -1,13 +1,13 @@
-export const Page1para = (props) => {
+export const ParaList = (props) => {
     return <p>Liste des pokemons</p>;
 }
 
-export const Page2para = (props) => {
+export const ParaPokedex = (props) => {
     return <p>Pokedex</p>;
 }
 
-export const Page3para = (props) => {
-    return <p>Capturez vos pokemon</p>;
+export const ParaInsert = (props) => {
+    return <p>Ajouter un pokémon</p>;
 }
 
 export const Filtrage = (props) => {

@@ -12,11 +12,11 @@ export const App = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className='formInsert' onSubmit={handleSubmit(onSubmit)}>
       <input {...register("numero")} placeholder="Numero" />
       <input {...register("name")} placeholder="Name" />
       <input {...register("img")} placeholder="Image" />
-      <div className="formSelect">
+      <div className="formInsert">
         <Form.Select {...register("type1", { required: true })} aria-label="Default select example" >
           <option>Type 1</option>
           <option value="None">None</option>

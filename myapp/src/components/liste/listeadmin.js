@@ -20,6 +20,10 @@ export default function ListeAdmin(props) {
     var url = new URL(str);
     var num = url.searchParams.get("numero");
 
+    if (num === null) {
+        return null;
+    } else {
+
     return <>
         <div>
             <div>
@@ -33,7 +37,7 @@ export default function ListeAdmin(props) {
                                     <h2>{pokemon.name}</h2>
                                     <p>{pokemon.type1}</p>
                                     <button onClick={() => DeletePokemon(pokemon)}>Supprimer</button>
-                                    <UpdateForm />
+                                    <UpdateForm pokemon={pokemon} />
                                 </div>
                             } else {
                                 return <div key={key} className="bloc-pokemon">
@@ -46,7 +50,7 @@ export default function ListeAdmin(props) {
                                 </div>
                             }
                         } else {
-                            return console.log("error")
+                            return null;
                         }
                     }
                     )
@@ -54,5 +58,6 @@ export default function ListeAdmin(props) {
             </div>
         </div>
     </>
+    }
 }
 

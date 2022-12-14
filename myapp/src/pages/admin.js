@@ -4,15 +4,15 @@ import { FormChoose } from "../components/form/formChoose";
 import { TitleAdmin } from "../components/home.js";
 import ListeAdmin from "../components/liste/listeadmin.js";
 import Menu from "../components/menu.js";
-import { Page3para } from "../components/para.js";
+import { ParaInsert } from "../components/para.js";
 
 
 
 export default function PageAdmin(props) {
-  return <div>
+  return <div className="labo">
     <Menu />
     <TitleAdmin />
-    <Page3para />
+    <ParaInsert />
     <App />
     <p>Quel pokemon voulez-vous modifier ?</p>
     <FormChoose />
