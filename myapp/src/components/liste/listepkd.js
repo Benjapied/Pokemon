@@ -27,21 +27,21 @@ export default function Listepkd(props) {
                 if (pokemon.type2 === "None") {
                   return <Col xs={6} md={4} key={key} className="bloc-pokemon">
                     <div className='pokebox colorMotisma'>
-                    <p>#{pokemon.numero}</p>
-                    <img alt={pokemon.name} src={pokemon.img} />
-                    <h2>{pokemon.name}</h2>
-                    <p>{pokemon.type1}</p>
-                    <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
+                      <p>#{pokemon.numero}</p>
+                      <img alt={pokemon.name} src={pokemon.img} />
+                      <h2>{pokemon.name}</h2>
+                      <p>{pokemon.type1}</p>
+                      <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
                     </div>
                   </Col>
                 } else {
                   return <Col xs={6} md={4} key={key} className="bloc-pokemon">
                     <div className='pokebox colorMotisma'>
-                    <p>#{pokemon.numero}</p>
-                    <img alt={pokemon.name} src={pokemon.img} />
-                    <h2>{pokemon.name}</h2>
-                    <p>{pokemon.type1},{pokemon.type2}</p>
-                    <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
+                      <p>#{pokemon.numero}</p>
+                      <img alt={pokemon.name} src={pokemon.img} />
+                      <h2>{pokemon.name}</h2>
+                      <p>{pokemon.type1},{pokemon.type2}</p>
+                      <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
                     </div>
                   </Col>
                 }

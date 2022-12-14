@@ -42,7 +42,7 @@ export default function ListeAdmin(props) {
                                     <h2>{pokemon.name}</h2>
                                     <p>{pokemon.type1},{pokemon.type2}</p>
                                     <button onClick={() => DeletePokemon(pokemon)}>Supprimer</button>
-                                    <UpdateForm pokemon={pokemon}/>
+                                    <UpdateForm pokemon={pokemon} />
                                 </div>
                             }
                         } else {

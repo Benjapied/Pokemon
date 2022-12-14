@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+.formInsert {
+    display: flex;
+    align-items: center;
+}
+
 .main {
     background-image: url("https://i.pinimg.com/originals/10/b4/75/10b475512fd3a515a4ae58705ecfc419.gif");
     background-repeat: no-repeat;
@@ -20,6 +25,11 @@
     min-height: 1000px;
 }
 
+.labo {
+    background-color: rgb(181, 181, 181);
+    min-height: 1000px;
+}
+
 .pokebox {
     background-color: #e6deb7d3;
     width: 90%;
@@ -31,7 +41,7 @@
 }
 
 .colorMotisma {
-    background-color: #ce4040d3;
+    background-color: #ce4040ea !important;
 }
 
 .title {
