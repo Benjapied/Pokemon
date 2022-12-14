@@ -1,6 +1,6 @@
 //Export du titre de la page home en H1
 export const TitleHome = (props) => {
-    return <h1>Accueil</h1>;
+    return <h1>Liste des pokémons</h1>;
 }
 
 //Export du titre de la page Pokemon en H1

@@ -8,7 +8,6 @@ import "../../style.css";
 export const App = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(JSON.stringify(data));
     addToPokemon(data);
   }
 

@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { DeletePokedex, getALLPokedex } from '../../api/pokemon.js';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 //Affiche les pokemmons dans pokedex
 export default function Listepkd(props) {
@@ -17,25 +20,35 @@ export default function Listepkd(props) {
   return <>
     <div>
       <div>
-        {
-          pokemons.map((pokemon, key) => {
-            if (pokemon.type2 === "None") {
-              return <div key={key} className="bloc-pokemon">
-                <img alt={pokemon.name} src={pokemon.img} />
-                <h2>{pokemon.name}</h2>
-                <p>{pokemon.type1}</p>
-                <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
-              </div>
-            } else {
-              return <div key={key} className="bloc-pokemon">
-                <img alt={pokemon.name} src={pokemon.img} />
-                <h2>{pokemon.name}</h2>
-                <p>{pokemon.type1},{pokemon.type2}</p>
-                <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
-              </div>
+        <Container>
+          <Row >
+            {
+              pokemons.map((pokemon, key) => {
+                if (pokemon.type2 === "None") {
+                  return <Col xs={6} md={4} key={key} className="bloc-pokemon">
+                    <div className='pokebox colorMotisma'>
+                    <p>#{pokemon.numero}</p>
+                    <img alt={pokemon.name} src={pokemon.img} />
+                    <h2>{pokemon.name}</h2>
+                    <p>{pokemon.type1}</p>
+                    <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
+                    </div>
+                  </Col>
+                } else {
+                  return <Col xs={6} md={4} key={key} className="bloc-pokemon">
+                    <div className='pokebox colorMotisma'>
+                    <p>#{pokemon.numero}</p>
+                    <img alt={pokemon.name} src={pokemon.img} />
+                    <h2>{pokemon.name}</h2>
+                    <p>{pokemon.type1},{pokemon.type2}</p>
+                    <button onClick={() => DeletePokedex(pokemon)}>Supprimer</button>
+                    </div>
+                  </Col>
+                }
+              })
             }
-          })
-        }
+          </Row>
+        </Container>
       </div>
     </div>
   </>

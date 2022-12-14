@@ -6,7 +6,6 @@ import "../../style.css";
 export const FormType = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        console.log(JSON.stringify(data));
         window.location.href = "http://localhost:3000?type=" + data.type;
     }
 
@@ -35,8 +34,8 @@ export const FormType = () => {
                     <option value="roche">Roche</option>
                     <option value="vol">Vol</option>
                 </Form.Select>
+                <button type="submit">Valider</button>
             </div>
-            <button type="submit">Valider</button>
         </form>
     );
 }

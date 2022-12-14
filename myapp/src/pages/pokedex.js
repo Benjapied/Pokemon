@@ -5,7 +5,7 @@ import { Page2para } from "../components/para.js";
 
 
 export default function Page2(props) {
-  return <div>
+  return <div className="pokedex">
     <Menu />
     <TitlePokedex />
     <Page2para />

@@ -4,7 +4,6 @@ import { addToPokemon } from "../../api/pokemon.js";
 export const DeleteForm = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        console.log(JSON.stringify(data));
         addToPokemon(data);
     }
 

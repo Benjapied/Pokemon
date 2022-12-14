@@ -7,6 +7,9 @@ export const Page2para = (props) => {
 }
 
 export const Page3para = (props) => {
-    return <p>Ajouter un pokemon</p>;
+    return <p>Capturez vos pokemon</p>;
 }
 
+export const Filtrage = (props) => {
+    return <p>Filtrez vos pokémons par type</p>
+}

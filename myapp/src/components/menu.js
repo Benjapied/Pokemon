@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function Menu() {
     return (
         <>
-            <Navbar bg="dark" variant="dark">
+            <Navbar sticky="top" bg="dark" variant="dark">
                 <Container>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="logo pokémon" height="40px"/>
                     <Nav className="me-auto">

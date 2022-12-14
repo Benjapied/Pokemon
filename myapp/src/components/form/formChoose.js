@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 export const FormChoose = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        console.log(JSON.stringify(data));
         window.location.href = "http://localhost:3000/admin?numero=" + data.numero;
     }
 

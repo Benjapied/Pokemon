@@ -7,11 +7,10 @@ import "../../style.css";
 export const UpdateForm = (pokemon) => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        console.log(JSON.stringify(data));
         UpdatePokemon(data);
     }
 
-    console.log(pokemon);
+    pokemon = pokemon.pokemon
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>

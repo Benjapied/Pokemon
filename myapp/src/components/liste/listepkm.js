@@ -22,63 +22,64 @@ export default function Liste(props) {
 
   var url = new URL(str);
   var type = url.searchParams.get("type");
-  console.log(type);
-
   return <>
     <div>
       <Container>
-            <Row >
-              {
-                pokemons.map((pokemon, key) => {
-                  if (type == undefined) {
-                    if (pokemon.type2 === "None") {
-                      return <Col xs={6} md={4}> <div key={key} className="bloc-pokemon">
-                        <img alt={pokemon.name} src={pokemon.img} />
+        <Row >
+          {
+            pokemons.map((pokemon, key) => {
+              if (type === null) {
+                if (pokemon.type2 === "None") {
+                  return <Col xs={6} md={4} key={key} className="bloc-pokemon ">
+                    <div className='pokebox'>
+                      <p>#{pokemon.numero}</p>
+                      <img alt={pokemon.name} src={pokemon.img} />
+                      <h2>{pokemon.name}</h2>
+                      <p>{pokemon.type1}</p>
+                      <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+                    </div>
+                  </Col>
+                } else {
+                  return <Col xs={6} md={4} key={key} className="bloc-pokemon ">
+                    <div className='pokebox'>
+                      <p>#{pokemon.numero}</p>
+                      <img alt={pokemon.name} src={pokemon.img} />
+                      <h2>{pokemon.name}</h2>
+                      <p>{pokemon.type1}, {pokemon.type2}</p>
+                      <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+                    </div>
+                  </Col>
+                }
+              } else {
+                if (pokemon.type1 === type || pokemon.type2 === type) {
+                  if (pokemon.type2 === "None") {
+                    return <Col xs={6} md={4} key={key} className="bloc-pokemon ">
+                      <div className='pokebox'>
                         <p>#{pokemon.numero}</p>
+                        <img alt={pokemon.name} src={pokemon.img} />
                         <h2>{pokemon.name}</h2>
                         <p>{pokemon.type1}</p>
                         <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
                       </div>
-                      </Col>
-                    } else {
-                      return <Col xs={6} md={4}><div key={key} className="bloc-pokemon">
-                        <img alt={pokemon.name} src={pokemon.img} />
+                    </Col>
+                  } else {
+                    return <Col xs={6} md={4} key={key} className="bloc-pokemon ">
+                      <div className='pokebox'>
                         <p>#{pokemon.numero}</p>
+                        <img alt={pokemon.name} src={pokemon.img} />
                         <h2>{pokemon.name}</h2>
                         <p>{pokemon.type1}, {pokemon.type2}</p>
                         <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
                       </div>
-                      </Col>
-                    }
-                  } else {
-                    if (pokemon.type1 === type || pokemon.type2 === type) {
-                      if (pokemon.type2 === "None") {
-                        return <Col xs={6} md={4}> <div key={key} className="bloc-pokemon">
-                          <img alt={pokemon.name} src={pokemon.img} />
-                          <p>#{pokemon.numero}</p>
-                          <h2>{pokemon.name}</h2>
-                          <p>{pokemon.type1}</p>
-                          <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-                        </div>
-                        </Col>
-                      } else {
-                        return <Col xs={6} md={4}><div key={key} className="bloc-pokemon">
-                          <img alt={pokemon.name} src={pokemon.img} />
-                          <p>#{pokemon.numero}</p>
-                          <h2>{pokemon.name}</h2>
-                          <p>{pokemon.type1}, {pokemon.type2}</p>
-                          <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-                        </div>
-                        </Col>
-                      }
-                    } else {
-                      return null;
-                    }
+                    </Col>
                   }
-                })
+                } else {
+                  return null;
+                }
               }
-            </Row>
-          
+            })
+          }
+        </Row>
       </Container>
     </div>
   </>
