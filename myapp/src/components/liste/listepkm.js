@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import { addToPokedex, getAll } from '../../api/pokemon.js';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import "../../style.css";
 
 //Affiche la liste des pokemons dans la base de donnée pokemon
 export default function Liste(props) {
@@ -22,51 +26,60 @@ export default function Liste(props) {
 
   return <>
     <div>
-      {
-        pokemons.map((pokemon, key) => {
-          if (type == undefined) {
-            if (pokemon.type2 === "None") {
-              return <div key={key} className="bloc-pokemon">
-                <img alt={pokemon.name} src={pokemon.img} />
-                <p>#{pokemon.numero}</p>
-                <h2>{pokemon.name}</h2>
-                <p>{pokemon.type1}</p>
-                <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-              </div>
-            } else {
-              return <div key={key} className="bloc-pokemon">
-                <img alt={pokemon.name} src={pokemon.img} />
-                <p>#{pokemon.numero}</p>
-                <h2>{pokemon.name}</h2>
-                <p>{pokemon.type1}, {pokemon.type2}</p>
-                <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-              </div>
-            }
-          } else {
-            if (pokemon.type1 === type || pokemon.type2 === type) {
-              if (pokemon.type2 === "None") {
-                return <div key={key} className="bloc-pokemon">
-                  <img alt={pokemon.name} src={pokemon.img} />
-                  <p>#{pokemon.numero}</p>
-                  <h2>{pokemon.name}</h2>
-                  <p>{pokemon.type1}</p>
-                  <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-                </div>
-              } else {
-                return <div key={key} className="bloc-pokemon">
-                  <img alt={pokemon.name} src={pokemon.img} />
-                  <p>#{pokemon.numero}</p>
-                  <h2>{pokemon.name}</h2>
-                  <p>{pokemon.type1}, {pokemon.type2}</p>
-                  <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
-                </div>
+      <Container>
+            <Row >
+              {
+                pokemons.map((pokemon, key) => {
+                  if (type == undefined) {
+                    if (pokemon.type2 === "None") {
+                      return <Col xs={6} md={4}> <div key={key} className="bloc-pokemon">
+                        <img alt={pokemon.name} src={pokemon.img} />
+                        <p>#{pokemon.numero}</p>
+                        <h2>{pokemon.name}</h2>
+                        <p>{pokemon.type1}</p>
+                        <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+                      </div>
+                      </Col>
+                    } else {
+                      return <Col xs={6} md={4}><div key={key} className="bloc-pokemon">
+                        <img alt={pokemon.name} src={pokemon.img} />
+                        <p>#{pokemon.numero}</p>
+                        <h2>{pokemon.name}</h2>
+                        <p>{pokemon.type1}, {pokemon.type2}</p>
+                        <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+                      </div>
+                      </Col>
+                    }
+                  } else {
+                    if (pokemon.type1 === type || pokemon.type2 === type) {
+                      if (pokemon.type2 === "None") {
+                        return <Col xs={6} md={4}> <div key={key} className="bloc-pokemon">
+                          <img alt={pokemon.name} src={pokemon.img} />
+                          <p>#{pokemon.numero}</p>
+                          <h2>{pokemon.name}</h2>
+                          <p>{pokemon.type1}</p>
+                          <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+                        </div>
+                        </Col>
+                      } else {
+                        return <Col xs={6} md={4}><div key={key} className="bloc-pokemon">
+                          <img alt={pokemon.name} src={pokemon.img} />
+                          <p>#{pokemon.numero}</p>
+                          <h2>{pokemon.name}</h2>
+                          <p>{pokemon.type1}, {pokemon.type2}</p>
+                          <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
+                        </div>
+                        </Col>
+                      }
+                    } else {
+                      return null;
+                    }
+                  }
+                })
               }
-            } else {
-              return null;
-            }
-          }
-        })
-      }
+            </Row>
+          
+      </Container>
     </div>
   </>
 }
