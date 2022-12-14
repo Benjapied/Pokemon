@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import PageAdmin from "./pages/admin.js";
+import  'bootstrap/dist/css/bootstrap.min.css' ;
 
 
 function App(props){

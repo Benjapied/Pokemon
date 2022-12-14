@@ -6,8 +6,8 @@ import { Page2para } from "../components/para.js";
 
 export default function Page2(props) {
   return <div>
-    <TitlePokedex />
     <Menu />
+    <TitlePokedex />
     <Page2para />
     <Listepkd />
   </div>

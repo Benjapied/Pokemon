@@ -9,8 +9,8 @@ import { Reset } from "../components/resetbutton.js";
 
 export default function Page1(props) {
   return <div>
-    <TitleHome />
     <Menu />
+    <TitleHome />
     <FormType />
     <button onClick={() => Reset()}>Reset</button>
     <Page3para />
